@@ -25,7 +25,7 @@ function TractionLogo({ name, domain }: { name: string; domain: string }) {
       href={`https://${domain}`} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="flex items-center gap-3 hover:opacity-100 opacity-60 transition-opacity grayscale hover:grayscale-0"
+      className="flex items-center gap-3 hover:opacity-80 transition-opacity"
     >
       <Image 
         src={`https://www.google.com/s2/favicons?domain=${domain}&sz=128`} 

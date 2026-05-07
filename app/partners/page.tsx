@@ -31,7 +31,7 @@ function PartnerCard({
         </div>
         
         {logoPath ? (
-          <div className="h-20 mb-8 relative w-56 opacity-60 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0">
+          <div className="h-20 mb-8 relative w-56 transition-opacity">
             <Image 
               src={logoPath} 
               alt={title} 
