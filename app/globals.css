@@ -5,6 +5,7 @@
 @theme {
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
+  --font-poppins: var(--font-poppins);
 }
 
 :root {

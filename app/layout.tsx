@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter } from "next/font/google";
+import { Instrument_Serif, Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/Navbar";
@@ -13,6 +13,12 @@ const instrumentSerif = Instrument_Serif({
 
 const inter = Inter({
   variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -31,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${instrumentSerif.variable} ${inter.variable} font-sans min-h-screen flex flex-col antialiased bg-[#F5F3EF] dark:bg-[#05070D] text-[#111] dark:text-white transition-colors duration-500`}
+        className={`${instrumentSerif.variable} ${inter.variable} ${poppins.variable} font-sans min-h-screen flex flex-col antialiased bg-[#F5F3EF] dark:bg-[#05070D] text-[#111] dark:text-white transition-colors duration-500`}
         suppressHydrationWarning
       >
         <ThemeProvider
