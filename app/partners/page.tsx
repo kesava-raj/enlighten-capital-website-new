@@ -3,18 +3,25 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 function PartnerCard({ 
   type, 
   title, 
   desc, 
   logoPath,
+  logoText,
+  keepOriginalColors,
+  websiteUrl,
   delay 
 }: { 
   type: string; 
   title: string; 
   desc: string; 
   logoPath?: string;
+  logoText?: string;
+  keepOriginalColors?: boolean;
+  websiteUrl?: string;
   delay: number;
 }) {
   return (
@@ -31,13 +38,20 @@ function PartnerCard({
         </div>
         
         {logoPath ? (
-          <div className="h-20 mb-8 relative w-56 transition-opacity">
-            <Image 
-              src={logoPath} 
-              alt={title} 
-              fill 
-              className="object-contain object-left dark:brightness-200 dark:contrast-125" 
-            />
+          <div className="flex items-center gap-5 mb-8">
+            <div className={`h-20 relative transition-opacity ${logoText ? 'w-20' : 'w-56'}`}>
+              <Image 
+                src={logoPath} 
+                alt={title} 
+                fill 
+                className={`object-contain object-left ${keepOriginalColors ? '' : 'dark:brightness-200 dark:contrast-125'}`} 
+              />
+            </div>
+            {logoText && (
+              <span className="text-3xl font-poppins font-semibold text-slate-800 dark:text-slate-200 tracking-tight">
+                {logoText}
+              </span>
+            )}
           </div>
         ) : (
           <h3 className="text-4xl font-serif mb-8 text-slate-900 dark:text-slate-100">{title}</h3>
@@ -45,6 +59,20 @@ function PartnerCard({
         
         <p className="text-slate-600 dark:text-slate-400 text-xl leading-relaxed font-light">{desc}</p>
       </div>
+
+      {websiteUrl && (
+        <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800/60">
+          <a
+            href={websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold tracking-wider uppercase text-slate-800 dark:text-slate-200 hover:text-[#C9A14A] dark:hover:text-[#C9A14A] transition-colors group/btn"
+          >
+            Visit Website
+            <ArrowUpRight className="w-4.5 h-4.5 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+          </a>
+        </div>
+      )}
     </motion.div>
   );
 }
@@ -79,6 +107,7 @@ export default function PartnersPage() {
             title="Startup Singam"
             desc="Strategic collaboration for high-potential early-stage opportunities."
             logoPath="/partners/startup-singam.png"
+            websiteUrl="https://www.startupsingam.com/"
             delay={0.1}
           />
           <PartnerCard 
@@ -92,6 +121,7 @@ export default function PartnersPage() {
             title="India Juris"
             desc="Structuring, compliance, and comprehensive legal counsel for our fund and portfolio."
             logoPath="/partners/india-juris.png"
+            websiteUrl="https://indiajuris.com/"
             delay={0.3}
           />
           <PartnerCard 
@@ -99,6 +129,9 @@ export default function PartnersPage() {
             title="MyProBuddy"
             desc="Operational acceleration and professional support network for portfolio companies."
             logoPath="/partners/myprobuddy.png"
+            logoText="MyProBuddy"
+            keepOriginalColors={true}
+            websiteUrl="https://myprobuddy.com/"
             delay={0.4}
           />
         </div>
