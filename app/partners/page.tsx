@@ -5,19 +5,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
-function PartnerCard({ 
-  type, 
-  title, 
-  desc, 
+function PartnerCard({
+  type,
+  title,
+  desc,
   logoPath,
   logoText,
   keepOriginalColors,
   websiteUrl,
-  delay 
-}: { 
-  type: string; 
-  title: string; 
-  desc: string; 
+  delay
+}: {
+  type: string;
+  title: string;
+  desc: string;
   logoPath?: string;
   logoText?: string;
   keepOriginalColors?: boolean;
@@ -25,7 +25,7 @@ function PartnerCard({
   delay: number;
 }) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -36,15 +36,15 @@ function PartnerCard({
         <div className="flex justify-between items-start mb-10">
           <h2 className="text-xs text-[#C9A14A] uppercase tracking-[3px] font-bold">{type}</h2>
         </div>
-        
+
         {logoPath ? (
           <div className="flex items-center gap-5 mb-8">
             <div className={`h-20 relative transition-opacity ${logoText ? 'w-20' : 'w-56'}`}>
-              <Image 
-                src={logoPath} 
-                alt={title} 
-                fill 
-                className={`object-contain object-left ${keepOriginalColors ? '' : 'dark:brightness-200 dark:contrast-125'}`} 
+              <Image
+                src={logoPath}
+                alt={title}
+                fill
+                className={`object-contain object-left ${keepOriginalColors ? '' : 'dark:brightness-200 dark:contrast-125'}`}
               />
             </div>
             {logoText && (
@@ -56,7 +56,7 @@ function PartnerCard({
         ) : (
           <h3 className="text-4xl font-serif mb-8 text-slate-900 dark:text-slate-100">{title}</h3>
         )}
-        
+
         <p className="text-slate-600 dark:text-slate-400 text-xl leading-relaxed font-light">{desc}</p>
       </div>
 
@@ -84,7 +84,7 @@ export default function PartnersPage() {
       <div className="fixed inset-0 pointer-events-none transition-colors duration-700 -z-10 bg-gradient-to-br from-[#F5F3EF] via-white to-[#EAE7E1] dark:from-[#05070D] dark:via-[#080A12] dark:to-black" />
 
       <main className="px-6 md:px-10 max-w-6xl mx-auto w-full relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -102,7 +102,7 @@ export default function PartnersPage() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-10 mb-32">
-          <PartnerCard 
+          <PartnerCard
             type="Strategic Partner"
             title="Startup Singam"
             desc="Strategic collaboration for high-potential early-stage opportunities."
@@ -110,13 +110,13 @@ export default function PartnersPage() {
             websiteUrl="https://www.startupsingam.com/"
             delay={0.1}
           />
-          <PartnerCard 
+          <PartnerCard
             type="Investment Partner"
             title="Enlighten Angel Fund"
             desc="Direct co-investment channel for angel-backed category leaders."
             delay={0.2}
           />
-          <PartnerCard 
+          <PartnerCard
             type="Legal Partner"
             title="India Juris"
             desc="Structuring, compliance, and comprehensive legal counsel for our fund and portfolio."
@@ -124,10 +124,10 @@ export default function PartnersPage() {
             websiteUrl="https://indiajuris.com/"
             delay={0.3}
           />
-          <PartnerCard 
+          <PartnerCard
             type="Ecosystem Partner"
             title="MyProBuddy"
-            desc="Operational acceleration and professional support network for portfolio companies."
+            desc="Partnering on fund growth, supporting LP capital mobilisation and providing a curated pipeline of investment-ready startups for portfolio deployment."
             logoPath="/partners/myprobuddy.png"
             logoText="MyProBuddy"
             keepOriginalColors={true}
@@ -136,7 +136,7 @@ export default function PartnersPage() {
           />
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
