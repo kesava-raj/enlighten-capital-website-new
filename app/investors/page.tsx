@@ -79,7 +79,7 @@ export default function InvestorsPage() {
         >
           <h2 className="text-4xl font-serif mb-10 text-slate-900 dark:text-slate-100">Explore investment opportunities</h2>
           <a
-            href="https://zfrmz.in/your-zoho-investor-form-url"
+            href="https://forms.zohopublic.in/enlightencapital06gm1/form/StartupFundingApplication/formperma/xdgG00m0sh5H7nLcAj0cvoZVTwj35TB4cYEU_GcO4rU"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#C9A14A] hover:bg-[#b08d41] text-black px-12 py-5 rounded-md font-bold text-sm tracking-widest uppercase transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#C9A14A]/20"
