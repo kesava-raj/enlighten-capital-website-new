@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function Sector({ title, desc }: { title: string; desc: string }) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -21,17 +21,17 @@ function Sector({ title, desc }: { title: string; desc: string }) {
 
 function TractionLogo({ name, domain }: { name: string; domain: string }) {
   return (
-    <a 
-      href={`https://${domain}`} 
-      target="_blank" 
+    <a
+      href={`https://${domain}`}
+      target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-3 hover:opacity-80 transition-opacity"
     >
-      <Image 
-        src={`https://www.google.com/s2/favicons?domain=${domain}&sz=128`} 
-        alt={name} 
-        width={20} 
-        height={20} 
+      <Image
+        src={`https://www.google.com/s2/favicons?domain=${domain}&sz=128`}
+        alt={name}
+        width={20}
+        height={20}
         unoptimized
         className="object-contain"
       />
@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* HERO */}
       <div className="relative px-6 md:px-10 py-32 md:py-48 max-w-6xl mx-auto z-10">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -57,7 +57,7 @@ export default function Home() {
           We invest before the market understands the opportunity.
         </motion.h1>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -67,14 +67,14 @@ export default function Home() {
           <span className="text-base md:text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed">Disciplined entry. Structured governance. Long-term ownership.</span>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="mt-16 flex flex-wrap gap-6"
         >
           <a
-            href="https://zfrmz.in/your-zoho-founder-form-url"
+            href="https://forms.zohopublic.in/enlightencapital06gm1/form/StartupFundingApplication/formperma/xdgG00m0sh5H7nLcAj0cvoZVTwj35TB4cYEU_GcO4rU"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#C9A14A] hover:bg-[#b08d41] text-black px-12 py-5 rounded-md font-bold text-sm tracking-widest uppercase transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#C9A14A]/20"
@@ -118,7 +118,7 @@ export default function Home() {
       {/* INVESTMENT FOCUS */}
       <section className="px-6 md:px-10 py-32 max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-24">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -126,7 +126,7 @@ export default function Home() {
           >
             Investment Focus
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -144,7 +144,7 @@ export default function Home() {
           <Sector title="Emerging" desc="Identifying and enabling new markets through technological shifts." />
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}

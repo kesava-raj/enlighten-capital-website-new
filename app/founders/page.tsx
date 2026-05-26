@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function ExpectationCard({ title, items, delay }: { title: string; items: string[], delay: number }) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -28,7 +28,7 @@ export default function FoundersPage() {
       <div className="fixed inset-0 pointer-events-none transition-colors duration-700 -z-10 bg-gradient-to-br from-[#F5F3EF] via-white to-[#EAE7E1] dark:from-[#05070D] dark:via-[#080A12] dark:to-black" />
 
       <main className="px-6 md:px-10 max-w-6xl mx-auto w-full relative z-10">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -38,24 +38,24 @@ export default function FoundersPage() {
         </motion.h1>
 
         <div className="grid md:grid-cols-3 gap-8 mb-32">
-          <ExpectationCard 
+          <ExpectationCard
             title="We invest in:"
             items={["Post-revenue companies", "₹20–80 Cr valuation range", "Clear path to scale"]}
             delay={0.1}
           />
-          <ExpectationCard 
+          <ExpectationCard
             title="What we expect:"
             items={["Clarity of thought", "Capital discipline", "Openness to governance"]}
             delay={0.2}
           />
-          <ExpectationCard 
+          <ExpectationCard
             title="What you get:"
             items={["Strategic capital", "Structured support", "Long-term partnership"]}
             delay={0.3}
           />
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -64,7 +64,7 @@ export default function FoundersPage() {
         >
           <h2 className="text-4xl font-serif mb-10 text-slate-900 dark:text-slate-100">Ready to build together?</h2>
           <a
-            href="https://zfrmz.in/your-zoho-founder-form-url"
+            href="https://forms.zohopublic.in/enlightencapital06gm1/form/StartupFundingApplication/formperma/xdgG00m0sh5H7nLcAj0cvoZVTwj35TB4cYEU_GcO4rU"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#C9A14A] hover:bg-[#b08d41] text-black px-12 py-5 rounded-md font-bold text-sm tracking-widest uppercase transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#C9A14A]/20"
